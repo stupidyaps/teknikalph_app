@@ -1,8 +1,6 @@
 # TeknikalPH
 
-Online Skilled Trade Services Catalog (Local Services)
-
-Group Major Requirement for ITEC303
+Online Skilled Trade Services Catalog (Local Services)   -   Group Major Requirement for ITEC303
 
 ## Emulated Device Specs
 
