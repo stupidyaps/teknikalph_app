@@ -25,7 +25,7 @@ For Collab, add ko muna kamo as Collaborators kaya kaipuhan muna email nindo sa 
 **Instructions sa Android Studio para makacommit sa Github:**
 <ol>
     <li>Install kamo Git from https://git-scm.com/</li>
-    <li>Then sa Github, click nindo ni:</li>
+    <li>Then sa Android Studio, click nindo ni:</li>
         <ul>
             <li> File > Settings > Version Control > Git </li>
             <ul>
