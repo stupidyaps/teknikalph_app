@@ -29,8 +29,8 @@ For Collab, add ko muna kamo as Collaborators kaya kaipuhan muna email nindo sa 
         <ul>
             <li> File > Settings > Version Control > Git </li>
             <ul>
-                <li> Sa Path to Git... Click nindo si **Test**, dapat may magluwas jan na Version.</li>
-                <li> Protected Branching, replace **master** with **main**</li>
+                <li> Sa Path to Git... Click nindo si <strong>Test</strong>, dapat may magluwas jan na Version.</li>
+                <li> Protected Branching, replace <strong>master</strong> with <strong>main</strong></li>
             </ul>
             <li> Sa Version Control menu, click Github.</li>
             <ul>
@@ -39,7 +39,7 @@ For Collab, add ko muna kamo as Collaborators kaya kaipuhan muna email nindo sa 
                 <li> Click Ok na lang pag tapos na </li>
             </ul>
         </ul>
-    <li>Kaipuhan din si account sa GIT na command line so open nindo **Git CMD** sa Windows.</li>
+    <li>Kaipuhan din si account sa GIT na command line so open nindo <strong>Git CMD</strong> sa Windows.</li>
     <ul>
         <li> Type nindo ni: (palitan nindo si nasa laog kang quote)</li>
         <ul>
@@ -48,7 +48,7 @@ For Collab, add ko muna kamo as Collaborators kaya kaipuhan muna email nindo sa 
         </ul>
         <li> After kayan close na lang nindo</li>
     </ul>
-    <li> Back sa Android Studio, sa Top Menu, click **VCS**, then **Enable Control Integration**</li>
+    <li> Back sa Android Studio, sa Top Menu, click <strong>VCS</strong>, then <strong>Enable Control Integration</strong></li>
         <ul>
             <li> Version is dapat Git then click OK</li>
         </ul>
