@@ -55,7 +55,9 @@ For Collab, add ko muna kamo as Collaborators kaya kaipuhan muna email nindo sa 
     <li> Sa Top Menu ulit, click <strong>Git</strong> then click <strong>Clone...</strong>.
         <ul>
             <li> Sa URL, kaag nindo si link kang github repository ta </li>
-            <li> Alternative: Sa left pane, click nindo si github ko ata to, then click nindo si repository. </li>
+                <ul>
+                    <li> Alternative: Sa left pane, click nindo si github ko ata to, then click nindo si repository. </li>
+                </ul>
             <li> After kayan, click <strong>Clone</strong> </li>
         </ul>
     <li> Ok na ata after kayan dinalan ko man lang din sa YT hahahaha https://www.youtube.com/watch?v=1YDor_o0J2w</li>
