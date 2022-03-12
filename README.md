@@ -7,12 +7,19 @@ Group Major Requirement for ITEC303
 ## Emulated Device Specs
 
 Device Name:    Pixel 2
+
 Size:           5.0"
+
 Resolution:     1080x1920px
+
 Density:        420dpi
+
 Android:        8.0 (Oreo) Google Inc.
+
 API Level:      26
+
 System Image:   x86
+
 
 ### Getting Started
 
