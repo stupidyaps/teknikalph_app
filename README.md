@@ -1,6 +1,7 @@
 # TeknikalPH
 
 Online Skilled Trade Services Catalog (Local Services)
+
 Group Major Requirement for ITEC303
 
 ## Getting Started
