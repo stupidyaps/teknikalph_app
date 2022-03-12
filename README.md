@@ -4,7 +4,17 @@ Online Skilled Trade Services Catalog (Local Services)
 
 Group Major Requirement for ITEC303
 
-## Getting Started
+## Emulated Device Specs
+
+Device Name:    Pixel 2
+Size:           5.0"
+Resolution:     1080x1920px
+Density:        420dpi
+Android:        8.0 (Oreo) Google Inc.
+API Level:      26
+System Image:   x86
+
+### Getting Started
 
 This project is a starting point for a Flutter application.
 
