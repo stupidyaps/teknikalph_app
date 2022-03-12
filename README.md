@@ -56,7 +56,7 @@ For Collab, add ko muna kamo as Collaborators kaya kaipuhan muna email nindo sa 
         <ul>
             <li> Sa URL, kaag nindo si link kang github repository ta </li>
             <li> Alternative: Sa left pane, click nindo si github ko ata to, then click nindo si repository. </li>
-            <li> After kayan, click Clone </li>
+            <li> After kayan, click <strong>Clone</strong> </li>
         </ul>
     <li> Ok na ata after kayan dinalan ko man lang din sa YT hahahaha https://www.youtube.com/watch?v=1YDor_o0J2w</li>
     <li> Pang check, try nindo magcommit haha </li>
