@@ -39,7 +39,7 @@ For Collab, add ko muna kamo as Collaborators kaya kaipuhan muna email nindo sa 
                 <li> Click Ok na lang pag tapos na </li>
             </ul>
         </ul>
-    <li>Kaipuhan din si account sa GIT na command line so open nindo <strong>Git CMD</strong> sa Windows.</li>
+    <li>Kaipuhan din si account sa GIT na command line so open nindo <strong>Git CMD or CMD</strong> sa Windows.</li>
     <ul>
         <li> Type nindo ni: (palitan nindo si nasa laog kang quote)</li>
         <ul>
