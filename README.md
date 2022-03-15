@@ -25,6 +25,15 @@ For Collab, add ko muna kamo as Collaborators kaya kaipuhan muna email nindo sa 
 **Instructions sa Android Studio para makacommit sa Github:**
 <ol>
     <li>Install kamo Git from https://git-scm.com/</li>
+    <li>Kaipuhan din si account sa GIT na command line so open nindo <strong>Git CMD or CMD</strong> sa Windows.</li>
+    <ul>
+        <li> Type nindo ni: (palitan nindo si nasa laog kang quote)</li>
+        <ul>
+            <li> git config --global user.email "example@gmail.com" </li>
+            <li> git config --global user.name "John Doe" </li>
+        </ul>
+        <li> After kayan close na lang nindo</li>
+    </ul>
     <li>Then sa Android Studio, click nindo ni:</li>
         <ul>
             <li> File > Settings > Version Control > Git </li>
@@ -39,15 +48,6 @@ For Collab, add ko muna kamo as Collaborators kaya kaipuhan muna email nindo sa 
                 <li> Click Ok na lang pag tapos na </li>
             </ul>
         </ul>
-    <li>Kaipuhan din si account sa GIT na command line so open nindo <strong>Git CMD or CMD</strong> sa Windows.</li>
-    <ul>
-        <li> Type nindo ni: (palitan nindo si nasa laog kang quote)</li>
-        <ul>
-            <li> git config --global user.email "example@gmail.com" </li>
-            <li> git config --global user.name "John Doe" </li>
-        </ul>
-        <li> After kayan close na lang nindo</li>
-    </ul>
     <li> Back sa Android Studio, sa Top Menu, click <strong>VCS</strong>, then <strong>Enable Control Integration</strong></li>
         <ul>
             <li> Version is dapat Git then click OK</li>
