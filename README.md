@@ -21,6 +21,7 @@ Online Skilled Trade Services Catalog (Local Services) - Group Major Requirement
 ### Getting Started
 
 For Collab, add ko muna kamo as Collaborators kaya kaipuhan muna email nindo sa github, send send na lang.
+Also make sure sa Github, inaccept na si invitation for collaboration kang groupmates para okay.
 
 **Instructions sa Android Studio para makacommit sa Github: (BTW dapat nakaSign-in kamo sa Github sa Browsers nindo)**
 <ol>
