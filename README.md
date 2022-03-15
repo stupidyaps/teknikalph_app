@@ -43,10 +43,10 @@ For Collab, add ko muna kamo as Collaborators kaya kaipuhan muna email nindo sa 
             </ul>
             <li> Sa Version Control menu, click Github.</li>
             <ul>
-                <li> Click nindo si Plus Sign **+** </li>
-                <li> Click **Login with Token**</li>
-                <li> Sa prompt, click **Generate** (maredirect siya sa Browser)</li>
-                <li> Scroll Down lang kamo tas click nindo si **Generate Token**</li>
+                <li> Click nindo si Plus Sign <strong>+</strong> </li>
+                <li> Click <strong>Login with Token</strong></li>
+                <li> Sa prompt, click <strong>Generate</strong> (maredirect siya sa Browser)</li>
+                <li> Scroll Down lang kamo tas click nindo si <strong>Generate Token</strong></li>
                 <li> Copy nindo si token, then paste nindo sa android studio prompt</li>
                 <li> Click Ok na lang pag tapos na </li>
             </ul>
