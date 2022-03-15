@@ -22,7 +22,7 @@ Online Skilled Trade Services Catalog (Local Services) - Group Major Requirement
 
 For Collab, add ko muna kamo as Collaborators kaya kaipuhan muna email nindo sa github, send send na lang.
 
-**Instructions sa Android Studio para makacommit sa Github:**
+**Instructions sa Android Studio para makacommit sa Github: (BTW dapat nakaSign-in kamo sa Github sa Browsers nindo)**
 <ol>
     <li>Install kamo Git from https://git-scm.com/</li>
     <li>Kaipuhan din si account sa GIT na command line so open nindo <strong>Git CMD or CMD</strong> sa Windows.</li>
@@ -43,8 +43,11 @@ For Collab, add ko muna kamo as Collaborators kaya kaipuhan muna email nindo sa 
             </ul>
             <li> Sa Version Control menu, click Github.</li>
             <ul>
-                <li> Click Add Account </li>
-                <li>Sa prompt, same lang si server pero si Login, Password, kaag nindo credentials</li>
+                <li> Click nindo si Plus Sign **+** </li>
+                <li> Click **Login with Token**</li>
+                <li> Sa prompt, click **Generate** (maredirect siya sa Browser)</li>
+                <li> Scroll Down lang kamo tas click nindo si **Generate Token**</li>
+                <li> Copy nindo si token, then paste nindo sa android studio prompt</li>
                 <li> Click Ok na lang pag tapos na </li>
             </ul>
         </ul>
@@ -61,5 +64,6 @@ For Collab, add ko muna kamo as Collaborators kaya kaipuhan muna email nindo sa 
             <li> After kayan, click <strong>Clone</strong> </li>
         </ul>
     <li> Ok na ata after kayan dinalan ko man lang din sa YT hahahaha https://www.youtube.com/watch?v=1YDor_o0J2w</li>
-    <li> Pang check, try nindo magcommit haha </li>
+    <li> Pang check, try nindo magedit then magcommit+push haha </li>
+    <li> If may problem, chat na lang kamo or/tas Discord kita stream check ta si ano problem.</li>
 </ol>
