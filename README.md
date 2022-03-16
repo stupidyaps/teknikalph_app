@@ -18,7 +18,7 @@ Online Skilled Trade Services Catalog (Local Services) - Group Major Requirement
 
 **System Image:**   x86
 
-### Getting Started
+## Getting Started
 
 For Collab, add ko muna kamo as Collaborators kaya kaipuhan muna email nindo sa github, send send na lang.
 Also make sure sa Github, inaccept na si invitation for collaboration kang groupmates para okay.
