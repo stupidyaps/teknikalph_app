@@ -9,3 +9,8 @@ void main(){
       )
   );
 }
+// PALETTES TO BE USED:
+// #B8D4ED
+// #C76643
+// #7E896B
+// #700000
