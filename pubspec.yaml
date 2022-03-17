@@ -38,6 +38,9 @@ dependencies:
   # Google Icon
   font_awesome_flutter: ^9.0.0
 
+  # Search bar
+  material_floating_search_bar: ^0.3.7
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -66,6 +69,7 @@ flutter:
     - assets/google.png
     - assets/twitter.png
     - assets/logo.png
+    - assets/defaultUserImage.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

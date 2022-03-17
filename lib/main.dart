@@ -4,7 +4,7 @@ import 'package:teknikalph_app/ui/login_page.dart';
 void main(){
   runApp(
       const MaterialApp(
-        title: "Teknikal PH Login Page",
+        title: "TeknikalPH App",
         home: LoginPage(),
       )
   );
