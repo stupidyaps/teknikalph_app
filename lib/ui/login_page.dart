@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:teknikalph_app/ui/home_page.dart';
+import 'package:teknikalph_app/ui/signup_page.dart';
 
 class LoginPage extends StatefulWidget{
+  const LoginPage({Key? key}) : super(key: key);
+
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -61,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
           child: const TextField(
             keyboardType: TextInputType.text,
             style: TextStyle(
-              color: Color(0xff522971),
+              color: Color(0xff000000),
             ),
             decoration: InputDecoration(
               border: InputBorder.none,
@@ -105,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
             obscureText: true,
             keyboardType: TextInputType.text,
             style: TextStyle(
-              color: Color(0xff522971),
+              color: Color(0xff000000),
             ),
             decoration: InputDecoration(
               border: InputBorder.none,
@@ -188,12 +192,17 @@ class _LoginPageState extends State<LoginPage> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        onPressed: () => debugPrint("Login Button Pressed"),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const HomePage()),
+          );
+        },
       ),
     );
   }
 
-  Widget _createOrSignInWithTxt(){
+  Widget _createOrTxt(){
     return Column(
       children: const <Widget>[
         Text(
@@ -229,15 +238,25 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ),
         icon: const FaIcon(FontAwesomeIcons.google, color: Colors.white,),
-        onPressed: () => debugPrint("Google Sign In Button Tapped"),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const HomePage()),
+          );
+        }
       ),
 
     );
   }
 
-  Widget _createSignUpBtn(){
+  Widget _createSignUpRedirectBtn(){
     return GestureDetector(
-      onTap: () => debugPrint("Sign Up button tapped"),
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const SignUpPage()),
+        );
+      },
       child: RichText(
           text: const TextSpan(
               children: [
@@ -313,11 +332,11 @@ class _LoginPageState extends State<LoginPage> {
                   _createRMeFPass(),
                   _createLoginBtn(),
                   const SizedBox(height: 15.0),
-                  _createOrSignInWithTxt(),
+                  _createOrTxt(),
                   const SizedBox(height: 5.0),
                   _createAltSignInBtn(),
                   const SizedBox(height: 13.0),
-                  _createSignUpBtn(),
+                  _createSignUpRedirectBtn(),
                 ],
               ),
             ),

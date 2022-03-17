@@ -1,52 +1,89 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:teknikalph_app/ui/home_page.dart';
+import 'package:teknikalph_app/ui/login_page.dart';
 
 class SignUpPage extends StatefulWidget{
+  const SignUpPage({Key? key}) : super(key: key);
+
   @override
   _LoginPageState createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<SignUpPage> {
-  bool _AgreeTerms = false;
+  bool _agreeTerms = false;
 
-  Widget _createUserNameBox(){
-    return Column(
+  Widget _createUserFLNameBox(){
+    return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         const SizedBox(height: 10.0),
-        Container(
-          alignment: Alignment.centerLeft,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(10.0),
-            border: Border.all(color: Colors.black),
-            boxShadow: const [
-              BoxShadow(
-                color: Colors.black12,
-                blurRadius: 6.0,
-                offset: Offset(0, 2),
+        Expanded(
+          child: Container(
+              margin: const EdgeInsets.fromLTRB(0,0,15,0),
+              alignment: Alignment.centerLeft,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10.0),
+                border: Border.all(color: Colors.black),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 6.0,
+                    offset: Offset(0, 2),
+                  ),
+                ],
               ),
-            ],
-          ),
-          height: 55.0,
-          child: const TextField(
-            keyboardType: TextInputType.text,
-            style: TextStyle(
-              color: Color(0xff522971),
+              height: 55.0,
+              width: 100,
+              child: const TextField(
+                keyboardType: TextInputType.text,
+                style: TextStyle(
+                  color: Color(0xff000000),
+                ),
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                  contentPadding: EdgeInsets.all(15.0),
+                  hintText: "First Name",
+                  hintStyle: TextStyle(
+                    color: Colors.black45,
+                  ),
+                ),
+              ),
             ),
-            decoration: InputDecoration(
-              border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 15.0),
-              prefixIcon: Icon(
-                Icons.person,
-                color: Color(0xff000000),
+        ),
+        Expanded(
+          child: Container(
+              alignment: Alignment.centerLeft,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10.0),
+                border: Border.all(color: Colors.black),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 6.0,
+                    offset: Offset(0, 2),
+                  ),
+                ],
               ),
-              hintText: "Username",
-              hintStyle: TextStyle(
-                color: Colors.black45,
+              height: 55.0,
+              width: 100,
+              child: const TextField(
+                keyboardType: TextInputType.text,
+                style: TextStyle(
+                  color: Color(0xff522971),
+                ),
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                  contentPadding: EdgeInsets.all(15.0),
+                  hintText: "Last Name",
+                  hintStyle: TextStyle(
+                    color: Colors.black45,
+                  ),
+                ),
               ),
             ),
-          ),
         )
       ],
     );
@@ -75,16 +112,51 @@ class _LoginPageState extends State<SignUpPage> {
           child: const TextField(
             keyboardType: TextInputType.text,
             style: TextStyle(
-              color: Color(0xff522971),
+              color: Color(0xff000000),
             ),
             decoration: InputDecoration(
               border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 15.0),
-              prefixIcon: Icon(
-                Icons.person,
-                color: Color(0xff000000),
+              contentPadding: EdgeInsets.all(15.0),
+              hintText: "Email Address",
+              hintStyle: TextStyle(
+                color: Colors.black45,
               ),
-              hintText: "Username",
+            ),
+          ),
+        )
+      ],
+    );
+  }
+
+  Widget _createContactBox(){
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        const SizedBox(height: 10.0),
+        Container(
+          alignment: Alignment.centerLeft,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(10.0),
+            border: Border.all(color: Colors.black),
+            boxShadow: const [
+              BoxShadow(
+                color: Colors.black12,
+                blurRadius: 6.0,
+                offset: Offset(0, 2),
+              ),
+            ],
+          ),
+          height: 55.0,
+          child: const TextField(
+            keyboardType: TextInputType.text,
+            style: TextStyle(
+              color: Color(0xff000000),
+            ),
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              contentPadding: EdgeInsets.all(15.0),
+              hintText: "Contact Number",
               hintStyle: TextStyle(
                 color: Colors.black45,
               ),
@@ -119,15 +191,11 @@ class _LoginPageState extends State<SignUpPage> {
             obscureText: true,
             keyboardType: TextInputType.text,
             style: TextStyle(
-              color: Color(0xff522971),
+              color: Color(0xff000000),
             ),
             decoration: InputDecoration(
               border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 15.0),
-              prefixIcon: Icon(
-                Icons.lock,
-                color: Color(0xff000000),
-              ),
+              contentPadding: EdgeInsets.all(15.0),
               hintText: "Password",
               hintStyle: TextStyle(
                 color: Colors.black45,
@@ -165,16 +233,12 @@ class _LoginPageState extends State<SignUpPage> {
             obscureText: true,
             keyboardType: TextInputType.text,
             style: TextStyle(
-              color: Color(0xff522971),
+              color: Color(0xff000000),
             ),
             decoration: InputDecoration(
               border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 15.0),
-              prefixIcon: Icon(
-                Icons.lock,
-                color: Color(0xff000000),
-              ),
-              hintText: "Password",
+              contentPadding: EdgeInsets.all(15.0),
+              hintText: "Confirm Password",
               hintStyle: TextStyle(
                 color: Colors.black45,
               ),
@@ -195,32 +259,27 @@ class _LoginPageState extends State<SignUpPage> {
             data: ThemeData(
                 unselectedWidgetColor: Colors.black),
             child: Checkbox(
-                value: _AgreeTerms,
+                value: _agreeTerms,
                 checkColor: const Color(0xffffffff),
                 activeColor: Colors.black,
                 onChanged: (value) {
                   setState(() {
-                    _AgreeTerms = value!;
+                    _agreeTerms = value!;
                   });
                 }
             )
         ),
-        const Text("Remember Me",
+        const Text("I Agree to our ",
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.normal,
+          ),
+        ),
+        const Text("Terms and Conditions",
           style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,
-          ),
-        ),
-        Container(
-          margin: const EdgeInsets.fromLTRB(40.0,0,0,0),
-          child: TextButton(
-              onPressed: () => debugPrint('Forgot Password Button Pressed'),
-              child: const Text("Forgot Password?",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              )
+            decoration: TextDecoration.underline,
           ),
         ),
       ],
@@ -248,12 +307,17 @@ class _LoginPageState extends State<SignUpPage> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        onPressed: () => debugPrint("Login Button Pressed"),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const HomePage()),
+          );
+        },
       ),
     );
   }
 
-  Widget _createOrSignUpWithTxt(){
+  Widget _createOrTxt(){
     return Column(
       children: const <Widget>[
         Text(
@@ -289,9 +353,47 @@ class _LoginPageState extends State<SignUpPage> {
           ),
         ),
         icon: const FaIcon(FontAwesomeIcons.google, color: Colors.white,),
-        onPressed: () => debugPrint("Google Sign Up Button Tapped"),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const HomePage()),
+          );
+        },
       ),
 
+    );
+  }
+
+  Widget _createLoginRedirectBtn(){
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const LoginPage()),
+        );
+      },
+      child: RichText(
+          text: const TextSpan(
+              children: [
+                TextSpan(
+                  text: "Already have an Account? ",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                TextSpan(
+                  text: "Sign In",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ]
+          )
+      ),
     );
   }
 
@@ -325,7 +427,7 @@ class _LoginPageState extends State<SignUpPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  const SizedBox(height: 10.0),
+                  const SizedBox(height: 20.0),
                   Container(
                       alignment: Alignment.centerLeft,
                       child:
@@ -338,15 +440,22 @@ class _LoginPageState extends State<SignUpPage> {
                         ),
                       )
                   ),
-                  _createUserNameBox(),
                   const SizedBox(height: 15.0),
+                  _createUserFLNameBox(),
+                  const SizedBox(height: 5.0),
+                  _createEmailBox(),
+                  const SizedBox(height: 5.0),
+                  _createContactBox(),
+                  const SizedBox(height: 5.0),
                   _createPasswordBox(),
+                  const SizedBox(height: 5.0),
+                  _createConfPasswordBox(),
                   _createAgreeTermCondCBox(),
                   _createSignUpBtn(),
-                  const SizedBox(height: 15.0),
-                  _createOrSignUpWithTxt(),
                   const SizedBox(height: 5.0),
+                  _createOrTxt(),
                   _createAltSignUpBtn(),
+                  _createLoginRedirectBtn(),
                 ],
               ),
             ),
