@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:teknikalph_app/ui/login_page.dart';
-// import 'package:teknikalph_app/ui/signup_page.dart';
 
 void main(){
   runApp(
-      MaterialApp(
+      const MaterialApp(
         title: "Teknikal PH Login Page",
         home: LoginPage(),
       )
