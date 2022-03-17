@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:teknikalph_app/ui/tradesmen_page.dart';
+import 'package:teknikalph_app/ui/home_page.dart';
 // import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class HomePage extends StatefulWidget{
-  const HomePage({Key? key}) : super(key: key);
+class TradesmenPage extends StatefulWidget{
+  const TradesmenPage({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _TradesmenPageState createState() => _TradesmenPageState();
 }
 
 //DAI PA NAKAKASEARCH, TEMPLATE PALANG
-class _HomePageState extends State<HomePage> {
+class _TradesmenPageState extends State<TradesmenPage> {
   Widget _createSearchBox(){
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,23 +55,22 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  // TEMPORARILY WILL REDIRECT TO ONE PAGE ONLY -> TRADESMEN PAGE
   Widget _createServiceBtn(String sName){
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 5.0),
+      padding: const EdgeInsets.symmetric(vertical: 7.0),
       width: double.infinity,
       height: 100,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-            elevation: 2,
-            primary: Colors.white,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15.0),
-              side: const BorderSide(
-                  width: 1.0,
-                  color: Colors.black
-              ),
+          elevation: 2,
+          primary: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+            side: const BorderSide(
+                width: 1.0,
+                color: Colors.black
             ),
+          ),
           alignment: Alignment.bottomLeft,
           padding: const EdgeInsets.only(bottom: 10, left: 10),
         ),
@@ -87,7 +86,7 @@ class _HomePageState extends State<HomePage> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const TradesmenPage()),
+            MaterialPageRoute(builder: (context) => const HomePage()),
           );
         },
       ),
@@ -97,39 +96,39 @@ class _HomePageState extends State<HomePage> {
   //For User Picture
   Widget _createUserPic(){
     return Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            Container(
-                alignment: Alignment.centerLeft,
-                child:
-                const Text(
-                  "Services",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 30.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                )
-            ),
-            const SizedBox(width:150),
-            GestureDetector(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        Container(
+            alignment: Alignment.centerLeft,
+            child:
+            const Text(
+              "Tradesmen",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 30.0,
+                fontWeight: FontWeight.bold,
+              ),
+            )
+        ),
+        const SizedBox(width:125),
+        GestureDetector(
             onTap: () => debugPrint("User Profile Tapped"),
             child: Container(
               height: 60.0,
               width: 60.0,
               decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black26,
-                  offset: Offset(0,2),
-                  blurRadius: 6.0,
-                )
-              ],
-                image: DecorationImage(
-                 image: AssetImage('assets/defaultUserImage.png'),
-                )
+                  shape: BoxShape.circle,
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black26,
+                      offset: Offset(0,2),
+                      blurRadius: 6.0,
+                    )
+                  ],
+                  image: DecorationImage(
+                    image: AssetImage('assets/defaultUserImage.png'),
+                  )
               ),
             )
         ),
@@ -172,59 +171,11 @@ class _HomePageState extends State<HomePage> {
                   const SizedBox(height: 15.0,),
                   Column(
                     children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          Expanded(child: _createServiceBtn("Plumbing")),
-                          const SizedBox(width: 15.0),
-                          Expanded(child: _createServiceBtn("Carpentry")),
-                        ],
-                      ),
-                      const SizedBox(height: 10.0),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          Expanded(child: _createServiceBtn("Cleaning")),
-                          const SizedBox(width: 15.0),
-                          Expanded(child: _createServiceBtn("Shopping")),
-                        ],
-                      ),
-                      const SizedBox(height: 10.0),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          Expanded(child: _createServiceBtn("Cooking")),
-                          const SizedBox(width: 15.0),
-                          Expanded(child: _createServiceBtn("Yardwork")),
-                        ],
-                      ),
-                      const SizedBox(height: 10.0),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          Expanded(child: _createServiceBtn("Mechanical")),
-                          const SizedBox(width: 15.0),
-                          Expanded(child: _createServiceBtn("Electrical")),
-                        ],
-                      ),
-                      const SizedBox(height: 10.0),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          Expanded(child: _createServiceBtn("Bills")),
-                          const SizedBox(width: 15.0),
-                          Expanded(child: _createServiceBtn("Gardening")),
-                        ],
-                      ),
-                      const SizedBox(height: 10.0),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          Expanded(child: _createServiceBtn("Carpentry")),
-                          const SizedBox(width: 15.0),
-                          Expanded(child: _createServiceBtn("Carpentry")),
-                        ],
-                      ),
+                      _createServiceBtn("Juan Dela Cruz"),
+                      _createServiceBtn("Asiong Salonga"),
+                      _createServiceBtn("Nico Ipo"),
+                      _createServiceBtn("Kitty Sanchez"),
+                      _createServiceBtn("Annie Batungbakal"),
                     ],
                   ),
                 ],
