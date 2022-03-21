@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:teknikalph_app/ui/home_page.dart';
+import 'package:teknikalph_app/ui/tradesmen_page.dart';
 // import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class FavoritesPage extends StatefulWidget{
-  const FavoritesPage({Key? key}) : super(key: key);
+class ServicesPage extends StatefulWidget{
+  const ServicesPage({Key? key}) : super(key: key);
 
   @override
-  _FavoritesPageState createState() => _FavoritesPageState();
+  _ServicesPageState createState() => _ServicesPageState();
 }
 
 //DAI PA NAKAKASEARCH, TEMPLATE PALANG
-class _FavoritesPageState extends State<FavoritesPage> {
+class _ServicesPageState extends State<ServicesPage> {
   Widget _createSearchBox(){
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,9 +55,10 @@ class _FavoritesPageState extends State<FavoritesPage> {
     );
   }
 
+  // TEMPORARILY WILL REDIRECT TO ONE PAGE ONLY -> TRADESMEN PAGE
   Widget _createServiceBtn(String sName){
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 7.0),
+      padding: const EdgeInsets.symmetric(vertical: 5.0),
       width: double.infinity,
       height: 100,
       child: ElevatedButton(
@@ -86,7 +87,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const HomePage()),
+            MaterialPageRoute(builder: (context) => const TradesmenPage()),
           );
         },
       ),
@@ -102,7 +103,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
             alignment: Alignment.centerLeft,
             child:
             const Text(
-              "Favorites",
+              "Services",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 30.0,
@@ -110,7 +111,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
               ),
             )
         ),
-        const SizedBox(width:125),
+        const SizedBox(width:150),
         GestureDetector(
             onTap: () => debugPrint("User Profile Tapped"),
             child: Container(
@@ -171,9 +172,59 @@ class _FavoritesPageState extends State<FavoritesPage> {
                   const SizedBox(height: 15.0,),
                   Column(
                     children: <Widget>[
-                      _createServiceBtn("Nico Ipo"),
-                      _createServiceBtn("Kitty Sanchez"),
-                      _createServiceBtn("Annie Batungbakal"),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          Expanded(child: _createServiceBtn("Plumbing")),
+                          const SizedBox(width: 15.0),
+                          Expanded(child: _createServiceBtn("Carpentry")),
+                        ],
+                      ),
+                      const SizedBox(height: 10.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          Expanded(child: _createServiceBtn("Cleaning")),
+                          const SizedBox(width: 15.0),
+                          Expanded(child: _createServiceBtn("Shopping")),
+                        ],
+                      ),
+                      const SizedBox(height: 10.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          Expanded(child: _createServiceBtn("Cooking")),
+                          const SizedBox(width: 15.0),
+                          Expanded(child: _createServiceBtn("Yardwork")),
+                        ],
+                      ),
+                      const SizedBox(height: 10.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          Expanded(child: _createServiceBtn("Mechanical")),
+                          const SizedBox(width: 15.0),
+                          Expanded(child: _createServiceBtn("Electrical")),
+                        ],
+                      ),
+                      const SizedBox(height: 10.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          Expanded(child: _createServiceBtn("Bills")),
+                          const SizedBox(width: 15.0),
+                          Expanded(child: _createServiceBtn("Gardening")),
+                        ],
+                      ),
+                      const SizedBox(height: 10.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          Expanded(child: _createServiceBtn("Carpentry")),
+                          const SizedBox(width: 15.0),
+                          Expanded(child: _createServiceBtn("Carpentry")),
+                        ],
+                      ),
                     ],
                   ),
                 ],
