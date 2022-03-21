@@ -42,20 +42,6 @@ class _HomePageState extends State<HomePage> {
          ),
          child: pageList[_currentIndex],
        ),
-       // PageView(
-       //   controller: _pageController,
-       //   onPageChanged: (newIndex){
-       //     setState(() {
-       //       _currentIndex = newIndex;
-       //     });
-       //   },
-       //   children: const [
-       //     ServicesPage(),
-       //     OrdersPage(),
-       //     FavoritesPage(),
-       //     SettingsPage(),
-       //   ],
-       // ),
        bottomNavigationBar: BottomNavigationBar(
             items: _bottomNavigationBarItems,
             type: BottomNavigationBarType.fixed,
