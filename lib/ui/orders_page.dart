@@ -127,9 +127,9 @@ class _OrdersPageState extends State<OrdersPage> {
                   const SizedBox(height: 15.0,),
                   Column(
                     children: <Widget>[
-                      _createServiceBtn("Nico Ipo"),
-                      _createServiceBtn("Kitty Sanchez"),
-                      _createServiceBtn("Annie Batungbakal"),
+                      _createServiceBtn("PC Maintenance: Nico Ipo"),
+                      _createServiceBtn("Cleaning: Kitty Sanchez"),
+                      _createServiceBtn("EXXXtra Service: Annie Batungbakal"),
                     ],
                   ),
                 ],
