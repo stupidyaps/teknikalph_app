@@ -14,3 +14,6 @@ void main(){
 // #C76643
 // #7E896B
 // #700000
+
+// Pa click, "Pub Get" sa pubspec.yaml (SAME PARENT DIRECTORY - /teknikalph_app/pubspec.yaml)
+// para madownload si dependencies (packages n' stuff)
