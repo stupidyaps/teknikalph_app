@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:teknikalph_app/ui/home_page.dart';
-// import 'package:material_floating_search_bar/material_floating_search_bar.dart';
-// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class TradesmenPage extends StatefulWidget{
-  const TradesmenPage({Key? key}) : super(key: key);
+  final String serviceName;
+
+  const TradesmenPage({Key? key, required this.serviceName}) : super(key: key);
 
   @override
   _TradesmenPageState createState() => _TradesmenPageState();
@@ -55,7 +55,7 @@ class _TradesmenPageState extends State<TradesmenPage> {
     );
   }
 
-  Widget _createServiceBtn(String sName){
+  Widget _createTradesmanBtn(String tName){
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 7.0),
       width: double.infinity,
@@ -74,7 +74,7 @@ class _TradesmenPageState extends State<TradesmenPage> {
           alignment: Alignment.bottomLeft,
           padding: const EdgeInsets.only(bottom: 10, left: 10),
         ),
-        child: Text(sName,
+        child: Text(tName,
           textAlign: TextAlign.left,
           style: const TextStyle(
             color: Color(0xff000000),
@@ -86,8 +86,9 @@ class _TradesmenPageState extends State<TradesmenPage> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const HomePage()),
+            MaterialPageRoute(builder: (context) => const HomePage())
           );
+          debugPrint("Worker $tName Tapped");
         },
       ),
     );
@@ -96,21 +97,19 @@ class _TradesmenPageState extends State<TradesmenPage> {
   //For User Picture
   Widget _createUserPic(){
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Container(
             alignment: Alignment.centerLeft,
             child:
-            const Text(
-              "Tradesmen",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 30.0,
-                fontWeight: FontWeight.bold,
+              Text(widget.serviceName+" Tradesmen",
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            )
         ),
-        const SizedBox(width:125),
         GestureDetector(
             onTap: () => debugPrint("User Profile Tapped"),
             child: Container(
@@ -139,6 +138,14 @@ class _TradesmenPageState extends State<TradesmenPage> {
   @override
   Widget build(BuildContext context){
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(45),
+        child: AppBar(
+            backgroundColor: Colors.white,
+            iconTheme: const IconThemeData(color: Colors.black),
+            elevation: 0,
+          ),
+      ),
       body: Stack(
         children: <Widget>[
           Container(
@@ -161,7 +168,6 @@ class _TradesmenPageState extends State<TradesmenPage> {
             child: SingleChildScrollView(
               padding: const EdgeInsets.symmetric(
                   horizontal: 30.0,
-                  vertical: 70.0
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -171,11 +177,11 @@ class _TradesmenPageState extends State<TradesmenPage> {
                   const SizedBox(height: 15.0,),
                   Column(
                     children: <Widget>[
-                      _createServiceBtn("Juan Dela Cruz"),
-                      _createServiceBtn("Asiong Salonga"),
-                      _createServiceBtn("Nico Ipo"),
-                      _createServiceBtn("Kitty Sanchez"),
-                      _createServiceBtn("Annie Batungbakal"),
+                      _createTradesmanBtn("Juan Dela Cruz"),
+                      _createTradesmanBtn("Asiong Salonga"),
+                      _createTradesmanBtn("Nico Ipo"),
+                      _createTradesmanBtn("Kitty Sanchez"),
+                      _createTradesmanBtn("Annie Batungbakal"),
                     ],
                   ),
                 ],

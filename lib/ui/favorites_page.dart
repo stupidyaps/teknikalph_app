@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:teknikalph_app/ui/home_page.dart';
-// import 'package:material_floating_search_bar/material_floating_search_bar.dart';
-// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class FavoritesPage extends StatefulWidget{
   const FavoritesPage({Key? key}) : super(key: key);
@@ -96,13 +94,13 @@ class _FavoritesPageState extends State<FavoritesPage> {
   //For User Picture
   Widget _createUserPic(){
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Container(
             alignment: Alignment.centerLeft,
             child:
             const Text(
-              "Favorites",
+              "Favorite Tradesmen",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 30.0,
@@ -110,7 +108,6 @@ class _FavoritesPageState extends State<FavoritesPage> {
               ),
             )
         ),
-        const SizedBox(width:125),
         GestureDetector(
             onTap: () => debugPrint("User Profile Tapped"),
             child: Container(

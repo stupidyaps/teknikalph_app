@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:teknikalph_app/ui/tradesmen_page.dart';
-// import 'package:material_floating_search_bar/material_floating_search_bar.dart';
-// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ServicesPage extends StatefulWidget{
   const ServicesPage({Key? key}) : super(key: key);
@@ -87,8 +85,9 @@ class _ServicesPageState extends State<ServicesPage> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const TradesmenPage()),
+            MaterialPageRoute(builder: (context) => TradesmenPage(serviceName: sName,)),
           );
+          debugPrint("$sName Service Tapped");
         },
       ),
     );
@@ -97,7 +96,7 @@ class _ServicesPageState extends State<ServicesPage> {
   //For User Picture
   Widget _createUserPic(){
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Container(
             alignment: Alignment.centerLeft,
@@ -111,7 +110,6 @@ class _ServicesPageState extends State<ServicesPage> {
               ),
             )
         ),
-        const SizedBox(width:150),
         GestureDetector(
             onTap: () => debugPrint("User Profile Tapped"),
             child: Container(
