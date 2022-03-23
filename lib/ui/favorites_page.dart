@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:teknikalph_app/ui/home_page.dart';
+import 'package:teknikalph_app/ui/fbooking_page.dart';
 
 class FavoritesPage extends StatefulWidget{
   const FavoritesPage({Key? key}) : super(key: key);
@@ -84,7 +84,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const HomePage()),
+            MaterialPageRoute(builder: (context) => FBookingPage(tradesmanName: sName, serviceName: "Carpentry",)),
           );
         },
       ),
@@ -170,7 +170,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
                     children: <Widget>[
                       _createServiceBtn("Nico Ipo"),
                       _createServiceBtn("Kitty Sanchez"),
-                      _createServiceBtn("Annie Batungbakal"),
+                      _createServiceBtn("Pablo Escobar"),
                     ],
                   ),
                 ],

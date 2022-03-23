@@ -1,5 +1,6 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:teknikalph_app/ui/favorites_page.dart';
 import 'package:teknikalph_app/ui/orders_page.dart';
 import 'package:teknikalph_app/ui/services_page.dart';
@@ -19,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   final _bottomNavigationBarItems = [
     const BottomNavigationBarItem(icon: Icon(Icons.home), label: "Services",),
     const BottomNavigationBarItem(icon: Icon(Icons.list_alt), label: "Orders",),
-    const BottomNavigationBarItem(icon: Icon(Icons.star), label: "Favorites",),
+    const BottomNavigationBarItem(icon: FaIcon(FontAwesomeIcons.heart), label: "Favorites",),
     const BottomNavigationBarItem(icon: Icon(Icons.settings), label: "Settings",),
   ];
 

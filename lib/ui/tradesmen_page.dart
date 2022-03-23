@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:teknikalph_app/ui/home_page.dart';
+import 'package:teknikalph_app/ui/booking_page.dart';
 
 class TradesmenPage extends StatefulWidget{
   final String serviceName;
@@ -86,7 +86,7 @@ class _TradesmenPageState extends State<TradesmenPage> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const HomePage())
+            MaterialPageRoute(builder: (context) => BookingPage(tradesmanName: tName, serviceName: widget.serviceName,))
           );
           debugPrint("Worker $tName Tapped");
         },
@@ -181,7 +181,7 @@ class _TradesmenPageState extends State<TradesmenPage> {
                       _createTradesmanBtn("Asiong Salonga"),
                       _createTradesmanBtn("Nico Ipo"),
                       _createTradesmanBtn("Kitty Sanchez"),
-                      _createTradesmanBtn("Annie Batungbakal"),
+                      _createTradesmanBtn("Axel Rosas"),
                     ],
                   ),
                 ],

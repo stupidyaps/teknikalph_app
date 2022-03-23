@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:teknikalph_app/ui/home_page.dart';
 
+
 class OrdersPage extends StatefulWidget{
   const OrdersPage({Key? key}) : super(key: key);
 
@@ -11,7 +12,7 @@ class OrdersPage extends StatefulWidget{
 //DAI PA NAKAKASEARCH, TEMPLATE PALANG
 class _OrdersPageState extends State<OrdersPage> {
 
-  Widget _createProgressBtn(String sName){
+  Widget _createServiceBtn(String sName){
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 7.0),
       width: double.infinity,
@@ -52,7 +53,7 @@ class _OrdersPageState extends State<OrdersPage> {
   //For User Picture
   Widget _createUserPic(){
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         Container(
             alignment: Alignment.centerLeft,
@@ -66,6 +67,7 @@ class _OrdersPageState extends State<OrdersPage> {
               ),
             )
         ),
+        const SizedBox(width:85),
         GestureDetector(
             onTap: () => debugPrint("User Profile Tapped"),
             child: Container(
@@ -125,9 +127,9 @@ class _OrdersPageState extends State<OrdersPage> {
                   const SizedBox(height: 15.0,),
                   Column(
                     children: <Widget>[
-                      _createProgressBtn("PC Maintenance: Nico Ipo"),
-                      _createProgressBtn("Cleaning: Kitty Sanchez"),
-                      _createProgressBtn("Laundry: Annie Batungbakal"),
+                      _createServiceBtn("PC Maintenance: Nico Ipo"),
+                      _createServiceBtn("Cleaning: Kitty Sanchez"),
+                      _createServiceBtn("EXXXtra Service: Annie Batungbakal"),
                     ],
                   ),
                 ],

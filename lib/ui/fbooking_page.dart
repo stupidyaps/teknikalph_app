@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'home_page.dart';
 
-class BookingPage extends StatefulWidget{
+class FBookingPage extends StatefulWidget{
   final String tradesmanName;
   final String serviceName;
 
-  const BookingPage({Key? key, required this.tradesmanName, required this.serviceName}) : super(key: key);
+  const FBookingPage({Key? key, required this.tradesmanName, required this.serviceName}) : super(key: key);
 
   @override
-  _BookingPageState createState() => _BookingPageState();
+  _FBookingPageState createState() => _FBookingPageState();
 }
 
 //DAI PA NAKAKASEARCH, TEMPLATE PALANG
-class _BookingPageState extends State<BookingPage> {
+class _FBookingPageState extends State<FBookingPage> {
   DateTime selectedDate = DateTime.now();
   TimeOfDay selectedSTime = TimeOfDay.now();
   TimeOfDay selectedETime = TimeOfDay.now();
@@ -88,8 +88,8 @@ class _BookingPageState extends State<BookingPage> {
               children: [
                 Text(widget.serviceName,
                   style: const TextStyle(
-                    color: Colors.black,
-                    fontSize: 15.0
+                      color: Colors.black,
+                      fontSize: 15.0
                   ),
                 ),
                 const SizedBox(width:15),
@@ -118,39 +118,39 @@ class _BookingPageState extends State<BookingPage> {
       // border: TableBorder.all(color: Colors.black),
       children: const [
         TableRow(
-          children: [
-            Text("Queue #", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 18),),
-            Text("Time", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 18),),
-            Text("Date", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 18),),
-          ]
+            children: [
+              Text("Queue #", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 18),),
+              Text("Time", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 18),),
+              Text("Date", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 18),),
+            ]
         ),
         TableRow(
-          children: [
-            Text("1", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16),),
-            Text("12:00 NN - 03:00 PM", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16),),
-            Text("02/17/22", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16),),
-          ]
+            children: [
+              Text("1", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16),),
+              Text("12:00 NN - 03:00 PM", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16),),
+              Text("02/17/22", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16),),
+            ]
         ),
         TableRow(
-          children: [
-            Text("2", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16),),
-            Text("04:15 PM - 05:25 PM", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16),),
-            Text("02/17/22", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16),),
-          ]
+            children: [
+              Text("2", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16),),
+              Text("04:15 PM - 05:25 PM", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16),),
+              Text("02/17/22", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16),),
+            ]
         ),
         TableRow(
-          children: [
-            Text("3", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16),),
-            Text("06:05 PM - 07:30 PM", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16),),
-            Text("02/17/22", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16),),
-          ]
+            children: [
+              Text("3", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16),),
+              Text("06:05 PM - 07:30 PM", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16),),
+              Text("02/17/22", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16),),
+            ]
         ),
       ],
     );
   }
 
   Widget _createInfoTable(){
-   return Table(
+    return Table(
       columnWidths: const {
         0: FlexColumnWidth(0.1),
         1: FlexColumnWidth(1),
