@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:teknikalph_app/ui/settings_page.dart';
 import 'package:teknikalph_app/ui/tradesmen_page.dart';
 
 class ServicesPage extends StatefulWidget{
@@ -111,7 +112,13 @@ class _ServicesPageState extends State<ServicesPage> {
             )
         ),
         GestureDetector(
-            onTap: () => debugPrint("User Profile Tapped"),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SettingsPage()),
+              );
+                debugPrint("User Profile Tapped");
+            },
             child: Container(
               height: 60.0,
               width: 60.0,

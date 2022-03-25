@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:teknikalph_app/ui/fbooking_page.dart';
+import 'package:teknikalph_app/ui/settings_page.dart';
 
 class FavoritesPage extends StatefulWidget{
   const FavoritesPage({Key? key}) : super(key: key);
@@ -109,8 +110,14 @@ class _FavoritesPageState extends State<FavoritesPage> {
             )
         ),
         GestureDetector(
-            onTap: () => debugPrint("User Profile Tapped"),
-            child: Container(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const SettingsPage()),
+            );
+            debugPrint("User Profile Tapped");
+            },
+          child: Container(
               height: 60.0,
               width: 60.0,
               decoration: const BoxDecoration(
