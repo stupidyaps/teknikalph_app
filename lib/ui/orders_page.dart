@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:teknikalph_app/ui/home_page.dart';
+import 'package:teknikalph_app/ui/progress_page.dart';
 import 'package:teknikalph_app/ui/settings_page.dart';
 
 
@@ -13,7 +13,7 @@ class OrdersPage extends StatefulWidget{
 //DAI PA NAKAKASEARCH, TEMPLATE PALANG
 class _OrdersPageState extends State<OrdersPage> {
 
-  Widget _createServiceBtn(String sName){
+  Widget _createServiceBtn(String tName, String sName){
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 7.0),
       width: double.infinity,
@@ -32,7 +32,7 @@ class _OrdersPageState extends State<OrdersPage> {
           alignment: Alignment.bottomLeft,
           padding: const EdgeInsets.only(bottom: 10, left: 10),
         ),
-        child: Text(sName,
+        child: Text(tName+": "+sName,
           textAlign: TextAlign.left,
           style: const TextStyle(
             color: Color(0xFF014466),
@@ -44,7 +44,7 @@ class _OrdersPageState extends State<OrdersPage> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const HomePage()),
+            MaterialPageRoute(builder: (context) => ProgressPage(tName: tName,sName: sName)),
           );
         },
       ),
@@ -115,9 +115,9 @@ class _OrdersPageState extends State<OrdersPage> {
                   const SizedBox(height: 15.0,),
                   Column(
                     children: <Widget>[
-                      _createServiceBtn("PC Maintenance: Nico Ipo"),
-                      _createServiceBtn("Cleaning: Kitty Sanchez"),
-                      _createServiceBtn("EXXXtra Service: Annie Batungbakal"),
+                      _createServiceBtn("Nico Ipo","Mechanical"),
+                      _createServiceBtn("Kitty Sanchez","Cleaning"),
+                      _createServiceBtn("Annie Batungbakal","Laundry"),
                     ],
                   ),
                 ],
