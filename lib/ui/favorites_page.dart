@@ -21,7 +21,6 @@ class _FavoritesPageState extends State<FavoritesPage> {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(30.0),
-            border: Border.all(color: Colors.black),
             boxShadow: const [
               BoxShadow(
                 color: Colors.black12,
@@ -41,7 +40,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
               contentPadding: EdgeInsets.only(top: 15.0),
               prefixIcon: Icon(
                 Icons.search,
-                color: Color(0xff000000),
+                color: Colors.black54,
               ),
               hintText: "Search",
               hintStyle: TextStyle(
@@ -66,8 +65,8 @@ class _FavoritesPageState extends State<FavoritesPage> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15.0),
             side: const BorderSide(
-                width: 1.0,
-                color: Colors.black
+                width: 0.5,
+                color: Colors.black26
             ),
           ),
           alignment: Alignment.bottomLeft,
@@ -76,7 +75,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
         child: Text(sName,
           textAlign: TextAlign.left,
           style: const TextStyle(
-            color: Color(0xff000000),
+            color: Color(0xFF014466),
             fontSize: 18,
             letterSpacing: 1.5,
             fontWeight: FontWeight.bold,
@@ -103,7 +102,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
             const Text(
               "Favorite Tradesmen",
               style: TextStyle(
-                color: Colors.black,
+                color: Colors.white,
                 fontSize: 30.0,
                 fontWeight: FontWeight.bold,
               ),
@@ -146,32 +145,16 @@ class _FavoritesPageState extends State<FavoritesPage> {
       body: Stack(
         children: <Widget>[
           Container(
-            height: double.infinity,
+            height: 500,
             width: double.infinity,
-            decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end:  Alignment.bottomCenter,
-                  colors: [
-                    Color(0xFFffffff),
-                    Color(0xFFffffff),
-                    Color(0xFFffffff),
-                  ],
-                )
-            ),
+            color: Colors.white,
           ),
           SizedBox(
-            height: double.infinity,
             child: SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(
-                  horizontal: 30.0,
-                  vertical: 70.0
-              ),
+              padding: const EdgeInsets.fromLTRB(30,200,30,20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  _createUserPic(),
-                  _createSearchBox(),
                   const SizedBox(height: 15.0,),
                   Column(
                     children: <Widget>[
@@ -182,6 +165,36 @@ class _FavoritesPageState extends State<FavoritesPage> {
                   ),
                 ],
               ),
+            ),
+          ),
+          Positioned(
+            child: Container(
+              height: 200,
+              padding: const EdgeInsets.fromLTRB(30,50,30,10),
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  begin: Alignment.topLeft,
+                  end:  Alignment.centerRight,
+                  colors: [
+                    Color(0xfffe8161),
+                    Color(0xfff4775e),
+                    Color(0xffda5a59)
+                  ],
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 1,
+                    blurRadius: 5,
+                    offset: const Offset(0, 3), // changes position of shadow
+                  ),
+                ],
+              ),child: Column(
+              children: <Widget>[
+                _createUserPic(),
+                _createSearchBox(),
+              ],
+            ),
             ),
           ),
         ],

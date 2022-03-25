@@ -52,6 +52,7 @@ class _HomePageState extends State<HomePage> {
                 _currentIndex = index;
               });
             },
+         selectedItemColor: const Color(0xfffe8161),
          ),
      );
   }
