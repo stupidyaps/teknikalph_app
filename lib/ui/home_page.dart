@@ -13,7 +13,6 @@ class HomePage extends StatefulWidget{
   _HomePageState createState() => _HomePageState();
 }
 
-//DAI PA NAKAKASEARCH, TEMPLATE PALANG
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
 

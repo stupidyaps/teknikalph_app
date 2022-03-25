@@ -11,7 +11,6 @@ class BookingPage extends StatefulWidget{
   _BookingPageState createState() => _BookingPageState();
 }
 
-//DAI PA NAKAKASEARCH, TEMPLATE PALANG
 class _BookingPageState extends State<BookingPage> {
   DateTime selectedDate = DateTime.now();
   TimeOfDay selectedSTime = TimeOfDay.now();
