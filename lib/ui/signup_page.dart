@@ -25,7 +25,6 @@ class _LoginPageState extends State<SignUpPage> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10.0),
-                border: Border.all(color: Colors.black),
                 boxShadow: const [
                   BoxShadow(
                     color: Colors.black12,
@@ -58,7 +57,6 @@ class _LoginPageState extends State<SignUpPage> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10.0),
-                border: Border.all(color: Colors.black),
                 boxShadow: const [
                   BoxShadow(
                     color: Colors.black12,
@@ -72,7 +70,7 @@ class _LoginPageState extends State<SignUpPage> {
               child: const TextField(
                 keyboardType: TextInputType.text,
                 style: TextStyle(
-                  color: Color(0xff522971),
+                  color: Colors.black,
                 ),
                 decoration: InputDecoration(
                   border: InputBorder.none,
@@ -99,7 +97,6 @@ class _LoginPageState extends State<SignUpPage> {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10.0),
-            border: Border.all(color: Colors.black),
             boxShadow: const [
               BoxShadow(
                 color: Colors.black12,
@@ -138,7 +135,6 @@ class _LoginPageState extends State<SignUpPage> {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10.0),
-            border: Border.all(color: Colors.black),
             boxShadow: const [
               BoxShadow(
                 color: Colors.black12,
@@ -177,7 +173,6 @@ class _LoginPageState extends State<SignUpPage> {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10.0),
-            border: Border.all(color: Colors.black),
             boxShadow: const [
               BoxShadow(
                 color: Colors.black12,
@@ -219,7 +214,6 @@ class _LoginPageState extends State<SignUpPage> {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10.0),
-            border: Border.all(color: Colors.black),
             boxShadow: const [
               BoxShadow(
                 color: Colors.black12,
@@ -257,11 +251,11 @@ class _LoginPageState extends State<SignUpPage> {
       children: [
         Theme(
             data: ThemeData(
-                unselectedWidgetColor: Colors.black),
+                unselectedWidgetColor: Colors.white),
             child: Checkbox(
                 value: _agreeTerms,
-                checkColor: const Color(0xffffffff),
-                activeColor: Colors.black,
+                checkColor: const Color(0xffea6d5b),
+                activeColor: Colors.white,
                 onChanged: (value) {
                   setState(() {
                     _agreeTerms = value!;
@@ -271,13 +265,13 @@ class _LoginPageState extends State<SignUpPage> {
         ),
         const Text("I Agree to our ",
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
             fontWeight: FontWeight.normal,
           ),
         ),
         const Text("Terms and Conditions",
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
             fontWeight: FontWeight.bold,
             decoration: TextDecoration.underline,
           ),
@@ -293,7 +287,7 @@ class _LoginPageState extends State<SignUpPage> {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
             elevation: 2,
-            primary: Colors.black,
+            primary: const Color(0xFF014466),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0),
             ),
@@ -323,7 +317,7 @@ class _LoginPageState extends State<SignUpPage> {
         Text(
           "or",
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
             fontWeight: FontWeight.bold,
           ),
         )
@@ -338,7 +332,7 @@ class _LoginPageState extends State<SignUpPage> {
       child: ElevatedButton.icon(
         style: ElevatedButton.styleFrom(
             elevation: 2,
-            primary: Colors.black,
+            primary: const Color(0xFF014466),
             onPrimary: Colors.white,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0),
@@ -352,7 +346,7 @@ class _LoginPageState extends State<SignUpPage> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        icon: const FaIcon(FontAwesomeIcons.google, color: Colors.white,),
+        icon: const FaIcon(FontAwesomeIcons.google, color: Color(0xFFF65314),),
         onPressed: () {
           Navigator.push(
             context,
@@ -378,7 +372,7 @@ class _LoginPageState extends State<SignUpPage> {
                 TextSpan(
                   text: "Already have an Account? ",
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 18.0,
                     fontWeight: FontWeight.w400,
                   ),
@@ -386,7 +380,7 @@ class _LoginPageState extends State<SignUpPage> {
                 TextSpan(
                   text: "Sign In",
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 18.0,
                     fontWeight: FontWeight.bold,
                   ),
@@ -410,9 +404,9 @@ class _LoginPageState extends State<SignUpPage> {
                   begin: Alignment.topCenter,
                   end:  Alignment.bottomCenter,
                   colors: [
-                    Color(0xFFffffff),
-                    Color(0xFFffffff),
-                    Color(0xFFffffff),
+                    Color(0xfffe8161),
+                    Color(0xfff4775e),
+                    Color(0xffda5a59)
                   ],
                 )
             ),
@@ -434,7 +428,7 @@ class _LoginPageState extends State<SignUpPage> {
                       const Text(
                         "Sign Up",
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 30.0,
                           fontWeight: FontWeight.bold,
                         ),

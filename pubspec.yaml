@@ -47,6 +47,9 @@ dependencies:
   # Date & time
   intl: ^0.17.0
 
+  # Progress Bar
+  timeline_tile: ^2.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

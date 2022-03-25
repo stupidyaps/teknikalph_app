@@ -11,7 +11,6 @@ class BookingPage extends StatefulWidget{
   _BookingPageState createState() => _BookingPageState();
 }
 
-//DAI PA NAKAKASEARCH, TEMPLATE PALANG
 class _BookingPageState extends State<BookingPage> {
   DateTime selectedDate = DateTime.now();
   TimeOfDay selectedSTime = TimeOfDay.now();
@@ -79,7 +78,7 @@ class _BookingPageState extends State<BookingPage> {
           children: <Widget>[
             Text(widget.tradesmanName,
               style: const TextStyle(
-                color: Colors.black,
+                color: Colors.white,
                 fontSize: 27.0,
                 fontWeight: FontWeight.bold,
               ),
@@ -88,7 +87,7 @@ class _BookingPageState extends State<BookingPage> {
               children: [
                 Text(widget.serviceName,
                   style: const TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 15.0
                   ),
                 ),
@@ -96,7 +95,7 @@ class _BookingPageState extends State<BookingPage> {
                 const Icon(Icons.star, color: Colors.yellow,),
                 const Text("5.0",
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 15.0
                   ),
                 ),
@@ -213,6 +212,7 @@ class _BookingPageState extends State<BookingPage> {
             style: TextStyle(
               fontWeight: FontWeight.w600,
               fontSize: 18,
+              color: Colors.black,
             ),
           ),
           Icon(Icons.star_half, color: Colors.yellow,),
@@ -280,7 +280,7 @@ class _BookingPageState extends State<BookingPage> {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
             elevation: 2,
-            primary: Colors.black,
+            primary: const Color(0xFF014466),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0),
             ),
@@ -301,9 +301,9 @@ class _BookingPageState extends State<BookingPage> {
           showDialog(
               context: context,
               builder: (context) => AlertDialog(
-                title: const Text("Booking Submitted", textAlign: TextAlign.center,),
+                title: const Text("Booking Submitted", textAlign: TextAlign.center,style: TextStyle(color: Color(0xfffe8161)),),
                 content: SizedBox(
-                  height: 175,
+                  height: 165,
                   child: Column(
                     children: <Widget>[
                       Flexible(
@@ -326,7 +326,7 @@ class _BookingPageState extends State<BookingPage> {
                         context,
                         MaterialPageRoute(builder: (context) => const HomePage()),
                       ),
-                      child: const Text("Continue"))
+                      child: const Text("Continue", style: TextStyle(color: Color(0xFF014466), fontSize: 18),))
                 ],
               )
           );
@@ -339,44 +339,23 @@ class _BookingPageState extends State<BookingPage> {
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(45),
-        child: AppBar(
-          backgroundColor: Colors.white,
-          iconTheme: const IconThemeData(color: Colors.black),
-          elevation: 0,
-        ),
-      ),
+      // appBar: PreferredSize(
+      //   preferredSize: const Size.fromHeight(45),
+      //   child: AppBar(
+      //     backgroundColor: Colors.white,
+      //     iconTheme: const IconThemeData(color: Colors.black),
+      //     elevation: 0,
+      //   ),
+      // ),
       body: Stack(
         children: <Widget>[
-          Container(
-            height: double.infinity,
-            width: double.infinity,
-            decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end:  Alignment.bottomCenter,
-                  colors: [
-                    Color(0xFFffffff),
-                    Color(0xFFffffff),
-                    Color(0xFFffffff),
-                  ],
-                )
-            ),
-          ),
           SizedBox(
             height: double.infinity,
             child: SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 35.0,
-              ),
+              padding: const EdgeInsets.fromLTRB(30,275,30,20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  const SizedBox(height: 10,),
-                  _createUserPicWNameRate(),
-                  const SizedBox(height: 20,),
-                  _createBookWorker(),
                   const SizedBox(height: 20,),
                   Column(
                     children: <Widget>[
@@ -386,6 +365,7 @@ class _BookingPageState extends State<BookingPage> {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 20,
+                              color: Color(0xFF014466),
                             ),
                           ),
                         ],
@@ -399,6 +379,7 @@ class _BookingPageState extends State<BookingPage> {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 20,
+                              color: Color(0xFF014466),
                             ),
                           ),
                         ],
@@ -412,6 +393,7 @@ class _BookingPageState extends State<BookingPage> {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 20,
+                              color: Color(0xFF014466),
                             ),
                           ),
                         ],
@@ -423,6 +405,38 @@ class _BookingPageState extends State<BookingPage> {
                   ),
                 ],
               ),
+            ),
+          ),
+          Positioned(
+            child: Container(
+              height: 275,
+              padding: const EdgeInsets.fromLTRB(30,50,30,10),
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  begin: Alignment.topLeft,
+                  end:  Alignment.centerRight,
+                  colors: [
+                    Color(0xfffe8161),
+                    Color(0xfff4775e),
+                    Color(0xffda5a59)
+                  ],
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 1,
+                    blurRadius: 5,
+                    offset: const Offset(0, 3), // changes position of shadow
+                  ),
+                ],
+              ),child: Column(
+              children: <Widget>[
+                const SizedBox(height: 10,),
+                _createUserPicWNameRate(),
+                const SizedBox(height: 20,),
+                _createBookWorker(),
+              ],
+            ),
             ),
           ),
         ],

@@ -20,8 +20,8 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Container(
-              height: 175.0,
-              width: 175.0,
+              height: 150.0,
+              width: 150.0,
               decoration: const BoxDecoration(
                 // shape: BoxShape.circle,
                 // color: Colors.white,
@@ -52,10 +52,9 @@ class _LoginPageState extends State<LoginPage> {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10.0),
-            border: Border.all(color: Colors.black),
             boxShadow: const [
               BoxShadow(
-                color: Colors.black12,
+                color: Colors.black26,
                 blurRadius: 6.0,
                 offset: Offset(0, 2),
               ),
@@ -72,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
               contentPadding: EdgeInsets.only(top: 15.0),
               prefixIcon: Icon(
                 Icons.person,
-                color: Color(0xff000000),
+                color: Color(0xFFF5795E),
               ),
               hintText: "Username",
               hintStyle: TextStyle(
@@ -95,10 +94,9 @@ class _LoginPageState extends State<LoginPage> {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10.0),
-            border: Border.all(color: Colors.black),
             boxShadow: const [
               BoxShadow(
-                color: Colors.black12,
+                color: Colors.black26,
                 blurRadius: 6.0,
                 offset: Offset(0, 2),
               ),
@@ -116,7 +114,7 @@ class _LoginPageState extends State<LoginPage> {
               contentPadding: EdgeInsets.only(top: 15.0),
               prefixIcon: Icon(
                 Icons.lock,
-                color: Color(0xff000000),
+                color: Color(0xFFF3775D),
               ),
               hintText: "Password",
               hintStyle: TextStyle(
@@ -137,11 +135,11 @@ class _LoginPageState extends State<LoginPage> {
       children: [
         Theme(
             data: ThemeData(
-                unselectedWidgetColor: Colors.black),
+                unselectedWidgetColor: Colors.white),
             child: Checkbox(
                 value: _rememberMe,
-                checkColor: const Color(0xffffffff),
-                activeColor: Colors.black,
+                checkColor: const Color(0xffef735d),
+                activeColor: Colors.white,
                 onChanged: (value) {
                   setState(() {
                     _rememberMe = value!;
@@ -151,8 +149,8 @@ class _LoginPageState extends State<LoginPage> {
         ),
         const Text("Remember Me",
           style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
+            color: Colors.white,
+            fontWeight: FontWeight.w400,
           ),
         ),
         Container(
@@ -161,7 +159,7 @@ class _LoginPageState extends State<LoginPage> {
               onPressed: () => debugPrint('Forgot Password Button Pressed'),
               child: const Text("Forgot Password?",
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               )
@@ -178,11 +176,11 @@ class _LoginPageState extends State<LoginPage> {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
             elevation: 2,
-            primary: Colors.black,
+            primary: const Color(0xFF014466),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0),
             ),
-            padding: const EdgeInsets.all(12.0)
+            padding: const EdgeInsets.fromLTRB(10, 12, 10, 12)
         ),
         child: const Text("Sign In",
           style: TextStyle(
@@ -206,10 +204,10 @@ class _LoginPageState extends State<LoginPage> {
     return Column(
       children: const <Widget>[
         Text(
-          "or",
+          "or sign in with",
           style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
+            color: Colors.white,
+            fontWeight: FontWeight.w400,
           ),
         )
       ],
@@ -218,26 +216,26 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _createAltSignInBtn(){
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 15.0),
+      padding: const EdgeInsets.symmetric(vertical: 10.0),
       width: double.infinity,
       child: ElevatedButton.icon(
         style: ElevatedButton.styleFrom(
             elevation: 2,
-            primary: Colors.black,
+            primary: const Color(0xFF014466),
             onPrimary: Colors.white,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0),
             ),
-            padding: const EdgeInsets.all(12.0)
+            padding: const EdgeInsets.all(10.0)
         ),
-        label: const Text("Sign In with Google",
+        label: const Text("Google",
           style: TextStyle(
             fontSize: 18,
             letterSpacing: 1.5,
             fontWeight: FontWeight.bold,
           ),
         ),
-        icon: const FaIcon(FontAwesomeIcons.google, color: Colors.white,),
+        icon: const FaIcon(FontAwesomeIcons.google, color: Color(0xFFF65314),),
         onPressed: () {
           Navigator.push(
             context,
@@ -263,7 +261,7 @@ class _LoginPageState extends State<LoginPage> {
                 TextSpan(
                   text: "Don't have an Account? ",
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 18.0,
                     fontWeight: FontWeight.w400,
                   ),
@@ -271,7 +269,7 @@ class _LoginPageState extends State<LoginPage> {
                 TextSpan(
                   text: "Sign Up",
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 18.0,
                     fontWeight: FontWeight.bold,
                   ),
@@ -292,12 +290,12 @@ class _LoginPageState extends State<LoginPage> {
             width: double.infinity,
             decoration: const BoxDecoration(
                 gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end:  Alignment.bottomCenter,
+                  begin: Alignment.topLeft,
+                  end:  Alignment.centerRight,
                   colors: [
-                    Color(0xFFffffff),
-                    Color(0xFFffffff),
-                    Color(0xFFffffff),
+                    Color(0xfffe8161),
+                    Color(0xfff4775e),
+                    Color(0xffda5a59)
                   ],
                 )
             ),
@@ -312,30 +310,31 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  const SizedBox(height: 15.0),
                   _createLogo(),
                   const SizedBox(height: 10.0),
                   Container(
                       alignment: Alignment.centerLeft,
                       child:
                       const Text(
-                        "Log In",
+                        "Sign In",
                         style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 30.0,
-                          fontWeight: FontWeight.bold,
+                          fontSize: 25.0,
+                          fontWeight: FontWeight.w900,
+                          color: Colors.white,
                         ),
                       )
                   ),
                   _createUserNameBox(),
-                  const SizedBox(height: 15.0),
+                  const SizedBox(height: 5.0),
                   _createPasswordBox(),
                   _createRMeFPass(),
                   _createLoginBtn(),
-                  const SizedBox(height: 15.0),
+                  const SizedBox(height: 60.0),
                   _createOrTxt(),
-                  const SizedBox(height: 5.0),
+                  // const SizedBox(height: 25.0),
                   _createAltSignInBtn(),
-                  const SizedBox(height: 13.0),
+                  const SizedBox(height: 10.0),
                   _createSignUpRedirectBtn(),
                 ],
               ),
