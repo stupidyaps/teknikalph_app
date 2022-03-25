@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:teknikalph_app/ui/tradesmen_page.dart';
+import 'package:teknikalph_app/ui/settings_page.dart';
 
 class ServicesPage extends StatefulWidget{
   const ServicesPage({Key? key}) : super(key: key);
@@ -110,8 +111,14 @@ class _ServicesPageState extends State<ServicesPage> {
               ),
             )
         ),
+        // Goes to Settings page when profile picture is tapped
         GestureDetector(
-            onTap: () => debugPrint("User Profile Tapped"),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SettingsPage()),
+              );
+            },
             child: Container(
               height: 60.0,
               width: 60.0,

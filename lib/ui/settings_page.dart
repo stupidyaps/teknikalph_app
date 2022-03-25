@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:teknikalph_app/ui/login_page.dart';
+import 'package:teknikalph_app/ui/account_setting.dart';
 
 class SettingsPage extends StatefulWidget{
   const SettingsPage({Key? key}) : super(key: key);
@@ -9,7 +10,6 @@ class SettingsPage extends StatefulWidget{
 }
 
 class _SettingsPageState extends State<SettingsPage> {
-
   Widget _createTitle(){
     return Container(
       alignment: Alignment.centerLeft,
@@ -54,7 +54,6 @@ class _SettingsPageState extends State<SettingsPage> {
       ),
     );
   }
-
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -75,6 +74,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 )
             ),
           ),
+
           SizedBox(
             height: double.infinity,
             child: SingleChildScrollView(
@@ -88,7 +88,12 @@ class _SettingsPageState extends State<SettingsPage> {
                   _createTitle(),
                   const SizedBox(height: 15,),
                   GestureDetector(
-                      onTap: () => debugPrint("User Profile Tapped"),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const AccountPage()),
+                          );
+                        },
                       child: Container(
                         margin: const EdgeInsets.only(right: 200),
                         height: 100.0,
