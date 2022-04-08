@@ -325,9 +325,47 @@ class _LoginPageState extends State<SignUpPage> {
     );
   }
 
+  Widget _createLocBox(){
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        const SizedBox(height: 10.0),
+        Container(
+          alignment: Alignment.centerLeft,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(10.0),
+            boxShadow: const [
+              BoxShadow(
+                color: Colors.black12,
+                blurRadius: 6.0,
+                offset: Offset(0, 2),
+              ),
+            ],
+          ),
+          height: 55.0,
+          child: const TextField(
+            keyboardType: TextInputType.text,
+            style: TextStyle(
+              color: Color(0xff000000),
+            ),
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              contentPadding: EdgeInsets.all(15.0),
+              hintText: "Address",
+              hintStyle: TextStyle(
+                color: Colors.black45,
+              ),
+            ),
+          ),
+        )
+      ],
+    );
+  }
+
   Widget _createAltSignUpBtn(){
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 15.0),
+      padding: const EdgeInsets.symmetric(vertical: 12.0),
       width: double.infinity,
       child: ElevatedButton.icon(
         style: ElevatedButton.styleFrom(
@@ -337,7 +375,7 @@ class _LoginPageState extends State<SignUpPage> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0),
             ),
-            padding: const EdgeInsets.all(12.0)
+            padding: const EdgeInsets.all(8.0)
         ),
         label: const Text("Sign Up with Google",
           style: TextStyle(
@@ -440,6 +478,8 @@ class _LoginPageState extends State<SignUpPage> {
                   _createEmailBox(),
                   const SizedBox(height: 5.0),
                   _createContactBox(),
+                  const SizedBox(height: 5.0),
+                  _createLocBox(),
                   const SizedBox(height: 5.0),
                   _createPasswordBox(),
                   const SizedBox(height: 5.0),
